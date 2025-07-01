@@ -6,19 +6,15 @@ using namespace std;
 
 class Graph {
     vector< vector<int> > adj_matrix; // this is the element that have Graph class
-
-
     public:
         //the constructor
         Graph(int n){
              adj_matrix = vector< vector<int> > ( n , vector<int>(n,0) );
         };
-
         void add_edge(int u,int v){
             adj_matrix[u][v] = 1;
             adj_matrix[v][u] = 1;
         }
-
         void print(){
             cout << "Adj matrix of the Graph: " << endl;
             int n = adj_matrix.size();
@@ -33,7 +29,6 @@ class Graph {
 
 
 int main(){
-
     int n = 4;
     Graph g(n);
 
